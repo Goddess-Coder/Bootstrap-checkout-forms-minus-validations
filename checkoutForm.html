@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Bootstrap Checkout Form</title>
+</head>
+
+<body class="bg-light">
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-4 order-md-2 mb-4">
+                <div class="cartinfo">
+                    <div class="cartlabel" style="display: flex;">
+                        <h4 class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="text-muted">Your cart</span>
+                            <span class="badge badge-secondary badge-pill" style="margin-left: 200px;">3</span>
+                        </h4>
+                    </div>
+                    <ul class="list-group mb-3">
+                        <li class="list-group-item d-flex justify-content-between 1h condensed">
+                            <div>
+                                <h6 class="my-0">Product name</h6>
+                                <small class="text-muted">Brief description</small>
+                            </div>
+                            <span class="text-muted">$12</span>
+                        </li>
+            
+                        <li class="list-group-item d-flex justify-content-between 1h condensed">
+                            <div>
+                                <h6 class="my-0">Second product</h6>
+                                <small class="text-muted">Brief description</small>
+                            </div>
+                            <span class="text-muted">$8</span>
+                        </li>
+            
+                        <li class="list-group-item d-flex justify-content-between 1h condensed">
+                            <div>
+                                <h6 class="my-0">Third item</h6>
+                                <small class="text-muted">Brief description</small>
+                            </div>
+                            <span class="text-muted">$5</span>
+                        </li>
+            
+                        <li class="list-group-item d-flex justify-content-between bg-light">
+                            <div class="text-success">
+                                <h6 class="my-0">Promo code</h6>
+                                <small>EXAMPLECODE</small>
+                            </div>
+                            <span class="text-success">$-5</span>
+                        </li>
+            
+                        <li class="list-group-item d-flex justify-content-between">
+                            <div>
+                                <span class="my-0">Total(USD)</span>
+                            </div>
+                            <strong class="text-muted">$12</strong>
+                        </li>
+                    </ul>
+                    <!-- unorder list ends -->
+                    <form class="card p-2">
+                        <div class="input-group">
+                            <input class="form-control" type="text" placeholder="Promo code">
+            
+                            <div class="input-group-append">
+                                <button class="btn btn-secondary" type="submit">Redeem</button>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- promo code form ends -->
+                </div>
+                <!-- cartinfo ends -->
+            </div>
+            <!-- first columns ends -->
+            
+            
+            <div class="col-md-8 order-md-1">
+                <h4>Billing address</h4>
+                <form>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="fname">First name</label>
+                            <input class="form-control" type="text" id="fname" >
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="fname">Last name</label>
+                            <input class="form-control" type="text" id="lname" name="lname" >
+                        </div>
+                        <!-- columns ends -->
+                    </div>
+                    <!-- 1st row ends -->
+
+                    <div class="userinfo">
+                        <label for="username">Username</label>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">@</span>
+                            <input class="form-control" type="text" id="username" placeholder="Username" >
+                        </div>
+
+                        <label for="email">Email <small>(Optional)</small></label>
+                        <input class="form-control mb-3" type="text" id="email" placeholder="you@example.com">
+
+                        <label for="address">Address</label>
+                        <input class="form-control mb-3" type="text" id="address" placeholder="1234 Main St" aria-placeholder="">
+
+                        <label for="address2">Address 2 <small>(Optional)</small></label>
+                        <input class="form-control mb-3" type="text" id="address2" placeholder="Apartment or suite">
+                    </div>
+                    <!-- userinfo ends -->
+
+                    <div class="row">
+                        <div class="col-sm-5 mb-3">
+                            <label for="country">Country</label>
+                            <select class="custom-select d-block w-100" id="country" >
+                                <option>Choose...</option>
+                                <option>Bangladesh</option>
+                                <option>Nigeria</option>
+                                <option>United States</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-4">
+                            <label for="state">State</label>
+                            <select class="custom-select d-block w-100" id="state" >
+                                <option>Choose...</option>
+                                <option>Dhaka</option>
+                                <option>Lagos</option>
+                                <option>Illinois</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-2">
+                            <label for="zipcode">Zip</label>
+                            <input class="form-control" type="text" id="zipcode" >
+                        </div>
+                    </div>
+                    <!-- 2nd row ends -->
+                    <hr class="mb-4">
+
+                    <div class="d-block">
+                        <div class="custom-control custom-checkbox">
+                            <div class="shippingaddress">
+                                <input class="custom-control-input" type="checkbox" id="shippingAddr">
+                                <label class="custom-control-label" for="sameAddr">Shipping address is the same as my billing address</label>
+
+                            </div>
+                        
+                            <div class="saveoption">
+                                <input class="custom-control-input" type="checkbox" id="savedInfo">
+                                <label class="custom-control-label" for="savedInfo">Save this information for next time</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- custom checkbox ends -->
+                    <hr class="mb-4">
+
+                    <h4>Payment</h4>
+                    <div class="d-block my-3">
+                        <div class="custom-control custom-radio">
+                            <div class="creditcard">
+                                <input class="custom-control-input" type="radio" id="credit">
+                                <label class="custom-control-label" for="credit">Credit Card</label>
+                            </div>
+                        
+                            <div class="debitcard">
+                                <input class="custom-control-input" type="radio" id="debit">
+                                <label class="custom-control-label" for="debit">Debit Card</label>
+                            </div>
+                        
+                            <div class="paypal">
+                                <input class="custom-control-input" type="radio" id="paypal">
+                                <label class="custom-control-label" for="paypal">PayPal</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- custom radio ends -->
+
+                    <div class="row">
+                        <div class="col-md-6 mb-2">
+                            <label for="cardholder">Name on card</label>
+                            <input class="form-control" type="text" id="cardholder" >
+                            <small class="text-muted">Full name as displayed on card</small>
+                        </div>
+                        <div class="col-md-6 mb-2">
+                            <label for="cardnumber">Credit card number</label>
+                            <input class="form-control" type="text" id="cardnumber" >
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 mb-2">
+                            <label for="expiredate">Expiration</label>
+                            <input class="form-control" type="text" id="expiredate" >
+                        </div>
+                        <div class="col-md-4 mb-2">
+                            <label for="cvvnumber">CVV</label>
+                            <input class="form-control" type="text" id="cvvnumber" >
+                        </div>
+                    </div>
+                    <!-- card rows end -->
+                    <hr class="mb-4">
+
+                    <button class="btn btn-primary btn -lg btn-block mb-2" type="submit"> Continue to checkout</button>
+                </form>
+                <!-- billing form ends -->
+            </div>
+            <!-- second column ends -->
+
+            
+        </div>
+        <!-- top row ends -->
+    </div>
+    <!-- container ends -->
+</body>
+
+</html>
